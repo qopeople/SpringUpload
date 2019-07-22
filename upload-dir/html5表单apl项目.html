@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>html5表单apl项目</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		form{
+			box-shadow: 10px 10px 15px black;
+			width: 600px;
+			margin: 180px;
+		}
+		h1{
+			font-size: 300;
+			font-weight: 700px;
+			color: #87CEFA;
+			text-align: center;
+		}
+		label{
+			color: #87CEFA;
+
+		}
+		div{
+			margin: 20px;
+		}
+		.okk{
+            width: 140px;
+			font-size: 17px;
+			color: white;
+			background-color: #87CEFA;
+			font-weight: 100px;
+		}
+	</style>
+</head>
+<body style="background-color: #EEEEEE">
+<form  action="1.html" method="post" autocomplete="on"  >
+	<div>
+		<h1>用户注册页面</h1>
+	</div>
+	<hr style="background-color: #87CEFA">
+	<div style="position: relative;left: 140px;">
+		<div>
+		<label>用户姓名：</label>
+		<input type="text"  placeholder="请输入用户名" name="usernames" required >
+		</div>
+		<div>
+		<label>用户密码：</label>
+		<input type="password" placeholder="请输入密码"  id="passwords"  required>
+		</div>
+		<div>
+		<label>确认密码：</label>
+		<input type="password" placeholder="请再次输入密码" id="repasswords" required >
+		</div>
+		<div>
+		<label>联系方式：</label>
+		<input type="tel" placeholder="请输入联系方式" name="tels" required>
+		</div>
+		<div>
+		<label>电子邮箱：</label>
+		<input type="email" placeholder="请输入电子邮箱" autocomplete="on" name="emiles"  required>
+		<div > 
+			<input type="submit" placeholder="提交注册" name="ok" autofocus  class="okk" required  onsubmit="return check()">
+		</div>
+
+		</div>
+	</div>
+</form>
+<script type="text/javascript">
+	function check()
+	{
+       var a=document.getElementById(passwords).value;
+       var b=document.getElementById(repasswords).value; 
+       if(a == b) 
+         return true;
+       else 
+       {
+       	alert("密码输入错误！");
+         return false;
+       }
+	}
+</script>
+</body>
+</html>
+
+
